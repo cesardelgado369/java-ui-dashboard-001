@@ -32,13 +32,16 @@ public class TableStatus extends JLabel {
             Graphics2D g2 = (Graphics2D) grphcs;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             GradientPaint g;
-            if (type == StatusType.PENDING) {
-                g = new GradientPaint(0, 0, new Color(186, 123, 247), 0, getHeight(), new Color(167, 94, 236));
-            } else if (type == StatusType.APPROVED) {
-                g = new GradientPaint(0, 0, new Color(142, 142, 250), 0, getHeight(), new Color(123, 123, 245));
+            if (type == StatusType.PENDIENTE) {
+                g = new GradientPaint(0, 0, new Color(255, 236, 148), 0, getHeight(), new Color(255, 223, 94));
+            } else if (type == StatusType.LISTA) {
+                g = new GradientPaint(0, 0, new Color(157, 229, 155), 0, getHeight(), new Color(123, 210, 121));
+            } else if (type == StatusType.CANCELADA) {
+                g = new GradientPaint(0, 0, new Color(255, 165, 165), 0, getHeight(), new Color(245, 135, 135));
             } else {
-                g = new GradientPaint(0, 0, new Color(241, 208, 62), 0, getHeight(), new Color(211, 184, 61));
-            }
+                // Por si aparece algún otro estado inesperado
+               g = new GradientPaint(0, 0, Color.LIGHT_GRAY, 0, getHeight(), Color.GRAY);
+    }
             g2.setPaint(g);
             g2.fillRoundRect(0, 0, getWidth(), getHeight(), 1, 1);
         }

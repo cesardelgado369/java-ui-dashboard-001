@@ -12,9 +12,10 @@ public class Form_Home extends javax.swing.JPanel {
 
     public Form_Home() {
         initComponents();
-        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/stock.png")), "Stock Total", "$200000", "Increased by 60%"));
-        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/profit.png")), "Total Profit", "$15000", "Increased by 25%"));
-        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/flag.png")), "Unique Visitors", "$300000", "Increased by 70%"));
+        //ACÁ SE MANEJAN LAS TARJETAS
+        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/7.png")), "Vehiculo más vendido", "$200000", "Increased by 60%"));
+        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/profit.png")), "Mejor vendedor", "$15000", "Increased by 25%"));
+        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/8.png")), "Mejor cliente", "$300000", "Increased by 70%"));
         //  add row table
         spTable.setVerticalScrollBar(new ScrollBar());
         spTable.getVerticalScrollBar().setBackground(Color.WHITE);
@@ -22,20 +23,21 @@ public class Form_Home extends javax.swing.JPanel {
         JPanel p = new JPanel();
         p.setBackground(Color.WHITE);
         spTable.setCorner(JScrollPane.UPPER_RIGHT_CORNER, p);
-        table.addRow(new Object[]{"Mike Bhand", "mikebhand@gmail.com", "Admin", "25 Apr,2018", StatusType.PENDING});
-        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "25 Apr,2018", StatusType.REJECT});
-        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "25 Apr,2018", StatusType.PENDING});
-        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "25 Apr,2018", StatusType.REJECT});
-        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "25 Apr,2018", StatusType.PENDING});
-        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "25 Apr,2018", StatusType.PENDING});
-        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "25 Apr,2018", StatusType.APPROVED});
-        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "25 Apr,2018", StatusType.REJECT});
-        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "25 Apr,2018", StatusType.PENDING});
+        //ACÁ SE MANEJA EL CONTENIDO DE LA TABLA
+        table.addRow(new Object[]{"Mike Bhand", "mikebhand@gmail.com", "Admin", "Efectivo", "25 Apr,2018", StatusType.PENDIENTE});
+        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "Transferencia", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "Tarjeta de débito", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "Cheque", "25 Apr,2018", StatusType.CANCELADA});
+        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "Transferencia", "25 Apr,2018", StatusType.PENDIENTE});
+        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "Transferencia", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "Tarjeta", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "Efectivo", "25 Apr,2018", StatusType.CANCELADA});
+        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "Efectivo", "25 Apr,2018", StatusType.PENDIENTE});
+        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "Cheque", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Andrew Strauss", "andrewstrauss@gmail.com", "Editor", "Cheque", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Ross Kopelman", "rosskopelman@gmail.com", "Subscriber", "Efectivo", "25 Apr,2018", StatusType.LISTA});
+        table.addRow(new Object[]{"Mike Hussy", "mikehussy@gmail.com", "Admin", "Tarjeta", "25 Apr,2018", StatusType.CANCELADA});
+        table.addRow(new Object[]{"Kevin Pietersen", "kevinpietersen@gmail.com", "Admin", "Transferencia", "25 Apr,2018", StatusType.PENDIENTE});
     }
 
     @SuppressWarnings("unchecked")
@@ -50,8 +52,6 @@ public class Form_Home extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         spTable = new javax.swing.JScrollPane();
         table = new com.raven.swing.Table();
-
-        setBackground(new java.awt.Color(242, 242, 242));
 
         panel.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
 
@@ -71,7 +71,7 @@ public class Form_Home extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(127, 127, 127));
-        jLabel1.setText("Standard Table Design");
+        jLabel1.setText("Ventas Registradas");
 
         spTable.setBorder(null);
 
@@ -80,11 +80,11 @@ public class Form_Home extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Email", "User Type", "Joined", "Status"
+                "Vehiculo", "Cliente", "Precio", "Forma de Pago", "Fecha", "Estado"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
