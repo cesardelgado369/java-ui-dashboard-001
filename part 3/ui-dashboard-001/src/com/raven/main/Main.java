@@ -10,6 +10,7 @@ import com.raven.form.Form_1;
 import com.raven.form.Form_2;
 import com.raven.form.Form_3;
 import com.raven.form.Form_Home;
+import controlador.Controlador;
 import java.awt.Color;
 import javax.swing.JComponent;
 
@@ -26,8 +27,12 @@ public class Main extends javax.swing.JFrame {
     private Form_1 form1;
     private Form_2 form2;
     private Form_3 form3;
+    private Controlador controlador;
+    
+    
 
     public Main() {
+        controlador.iniciarConexion();
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         home = new Form_Home();
