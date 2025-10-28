@@ -1,1 +1,3 @@
-/part 3/ui-dashboard-001/dist/
+echo "**/build/" > .gitignore
+echo "**/dist/" >> .gitignore
+echo "nbproject/private/" >> .gitignore
