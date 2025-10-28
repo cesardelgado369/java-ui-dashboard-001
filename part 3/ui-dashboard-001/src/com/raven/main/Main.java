@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.raven.main;
 
 import com.raven.event.EventMenuSelected;
@@ -10,13 +6,10 @@ import com.raven.form.Form_1;
 import com.raven.form.Form_2;
 import com.raven.form.Form_3;
 import com.raven.form.Form_Home;
+import com.raven.model.Conexion;
 import java.awt.Color;
 import javax.swing.JComponent;
 
-/**
- *
- * @author RAVEN
- */
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -28,6 +21,8 @@ public class Main extends javax.swing.JFrame {
     private Form_3 form3;
 
     public Main() {
+        Conexion conexion = new Conexion();
+        conexion.establecerConexion();
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         home = new Form_Home();
