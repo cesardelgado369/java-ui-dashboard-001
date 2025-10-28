@@ -14,7 +14,7 @@ public class Form_Home extends javax.swing.JPanel {
         initComponents();
         //ACÁ SE MANEJAN LAS TARJETAS
         card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/7.png")), "Vehiculo más vendido", "$200000", "Increased by 60%"));
-        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/profit.png")), "Mejor vendedor", "$15000", "Increased by 25%"));
+        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/3.png")), "Mejor vendedor", "$15000", "Increased by 25%"));
         card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/8.png")), "Mejor cliente", "$300000", "Increased by 70%"));
         //  add row table
         spTable.setVerticalScrollBar(new ScrollBar());
